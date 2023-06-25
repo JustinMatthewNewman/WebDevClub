@@ -1,0 +1,17 @@
+
+CREATE TABLE users (
+    id INT NOT NULL PRIMARY KEY AUTO_INCREMENT,
+    username VARCHAR(50) NOT NULL UNIQUE,
+    password VARCHAR(255) NOT NULL,
+    status INT NOT NULL,
+    admin INT NOT NULL,
+    created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
+    photo VARCHAR(500) NOT NULL
+);
+
+CREATE TABLE messages {
+    msg_id INT NOT NULL,
+    incoming_msg_id INT NOT NULL,
+    outgoing_msg_id INT NOT NULL,
+    msg VARCHAR(1000) NOT NULL
+};
